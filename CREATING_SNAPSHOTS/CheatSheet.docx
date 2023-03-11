@@ -1,0 +1,49 @@
+For initializing a Repository use --> "git init"
+
+For adding files to staging area:
+    01_ "git add file.ext" --> adding one file
+    02_ "git add file.ext file2.ext" --> adding multiple files
+    03_ "git add *.ext" --> adding all files with this extension
+    04_ "git add ."  --> adding all files
+
+For Viewing the status:
+    01_ "git status --> view full status
+    02_ "git status -"s" --> view short status
+
+For Committing the staging files:
+    01_ "git commit -m 'Your message.'" --> one line message
+    02_ "git commit" --> open editor to type a long message
+
+For Skipping the staging area use --> "git commit -am 'Your message.'"
+
+For Removing files:
+    01_ "git rm file.ext" --> removes from working dir and staging area
+    02_ "git rm --cached file.ext" --> removes from staging area only
+
+For Renaming or Moving files use --> "git mv file.ext file2.ext"
+
+For Viewing the staged or unstaged changes:
+    01_ "git diff" --> view all unstaged changes
+    02_ "git diff --staged" --> view all staged changes
+    03_ "git diff --cached" --> view all staged changes
+
+For Viewing the history:
+    01_ "git log" --> view full histor
+    02_ "git log --oneline" --> view short history
+    03_ "git log --reverse" --> lists the commits from oldest to newest
+
+For Viewing a commit:
+    01_ "git show 921a2ff(unique identifier)"" --> view the given commit
+    02_ "git show HEAD" --> view the last commit
+    03_ "git show HEAD~2" --> two steps before the last commit
+    04_ "git show HEAD:file.ext" --> view the version of file stored in last commit
+
+To Undo git add command use this --> "git restore --staged file.ext"
+
+For Discarding Local Changes:
+    01_ "git restore file.ext" --> copies the file from index to working dir
+    02_ "git restore file.ext file2.ext" --> restore multiple files
+    03_ "git restore ." --> discard all local changes(except untracked file)
+    04_ "git clean -fd" --> remove all untracked files
+
+For restoring an earlier version of file use --> "git restore --source=HEAD~2 file.ext"
